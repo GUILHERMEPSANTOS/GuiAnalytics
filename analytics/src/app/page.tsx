@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { redirect } from 'next/navigation'
 
 export default function Wellcome() {
   return (
@@ -14,6 +15,7 @@ export default function Wellcome() {
           objectFit="cover"
         />
       </div>
+      
     </div>
   );
 }
