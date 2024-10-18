@@ -5,7 +5,7 @@ export class AuthenticationService {
     #redirect_uri = process.env.REDIRECT_URL;
 
     async GetToken() {
-        var response = await fetch(`https://auth.mercadolibre.com.ar/authorization?response_type=code&client_id=${this.#client_id}&state=ABC123&redirect_uri=${this.#redirect_uri}`);
+        var response = await fetch(`https://auth.mercadolivre.com.br/authorization?response_type=code&client_id=${this.#client_id}&redirect_uri=${this.#redirect_uri}`);
 
         if (!response.ok) return Result.Failure(new ApiError({ code: "Dados.Invalidos", description: "Dados Inválidos", type: ErrorType.Failure }));
 
