@@ -1,7 +1,14 @@
+'use client'
+import { use } from 'react';
 import Image from "next/image";
-import { redirect } from 'next/navigation'
+
+const fetchCodeUrl = async () => await fetch(`${process.env.BASE_URL}`)
+
+
 
 export default function Wellcome() {
+  const data = use(fetchCodeUrl());
+
   return (
     <div className="flex flex-col items-center justify-center h-screen bg-gray-100">
       <h1 className="text-4xl font-bold text-gray-800 mb-4">Bem Vindo ao Gui-Analytics</h1>
@@ -15,7 +22,7 @@ export default function Wellcome() {
           objectFit="cover"
         />
       </div>
-      
+
     </div>
   );
 }
