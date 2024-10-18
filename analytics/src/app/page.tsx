@@ -2,9 +2,7 @@
 import { use } from 'react';
 import Image from "next/image";
 
-const fetchCodeUrl = async () => await fetch(`${process.env.BASE_URL}`)
-
-
+const fetchCodeUrl = async () => await fetch(`https://server-guilhermepereiradossantos41-outlookcoms-projects.vercel.app/mercado-livre/auth`);
 
 export default function Wellcome() {
   const data = use(fetchCodeUrl());
