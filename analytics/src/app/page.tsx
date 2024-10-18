@@ -1,7 +1,6 @@
 'use client'
 import { use } from 'react';
 import Image from "next/image";
-import { draftMode } from 'next/headers';
 
 const fetchCodeUrl = async () => await fetch(`${process.env.BASE_URL}`)
 
