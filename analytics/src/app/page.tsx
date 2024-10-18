@@ -1,6 +1,7 @@
 'use client'
 import { use } from 'react';
 import Image from "next/image";
+import { draftMode } from 'next/headers';
 
 const fetchCodeUrl = async () => await fetch(`${process.env.BASE_URL}`)
 
@@ -8,6 +9,9 @@ const fetchCodeUrl = async () => await fetch(`${process.env.BASE_URL}`)
 
 export default function Wellcome() {
   const data = use(fetchCodeUrl());
+
+  console.log(data);
+  
 
   return (
     <div className="flex flex-col items-center justify-center h-screen bg-gray-100">
